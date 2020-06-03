@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         })
     }
 
-    fun barChartInit() {
+    fun barChartInit() {  //長條圖表
 
         var mathBarArrayEntry = ArrayList<BarEntry>()
         val mathScore = arrayListOf(39f, 54f, 69f, 83f, 99f, 53f, 52f, 35f, 93f)
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         }
     }
 
-    fun lineChartInit() {
+    fun lineChartInit() {   // 折線圖表
 
         var mathLineArrayEntry = ArrayList<Entry>()
         val mathScore = arrayListOf(39f, 54f, 69f, 83f, 99f, 53f, 52f, 35f, 93f)
@@ -132,14 +132,14 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         lineEnglishSet.setColor(Color.GREEN) // 設置圖形顏色
 
         val lineArrayDataSet = ArrayList<ILineDataSet>()
-        lineArrayDataSet.add(lineMathSet)        //看有幾個長條圖，都丟進 list 裡面
-        lineArrayDataSet.add(lineEnglishSet)     //看有幾個長條圖，都丟進 list 裡面
+        lineArrayDataSet.add(lineMathSet)        //看有幾個折線圖，都丟進 list 裡面
+        lineArrayDataSet.add(lineEnglishSet)     //看有幾個折線圖，都丟進 list 裡面
         lc_data.data = LineData(lineArrayDataSet)
 
 
     }
 
-    fun bubbleChartInit() {
+    fun bubbleChartInit() {  // 泡泡圖
 
         var mathBubbleArrayEntry = ArrayList<BubbleEntry>()
         val mathScore = arrayListOf(39f, 54f, 69f, 83f, 99f, 53f, 52f, 35f, 93f)
@@ -185,7 +185,7 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         }
     }
 
-    fun animateX() {
+    fun animateX() {   // 水平動畫
         when (currentChart) {
             "Bar Chart" -> bc_data.animateX(2000)
             "Line Chart" -> lc_data.animateX(2000)
@@ -193,7 +193,7 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         }
     }
 
-    fun animateY() {
+    fun animateY() {  // 鉛直動畫
         when (currentChart) {
             "Bar Chart" -> bc_data.animateY(3000)
             "Line Chart" -> lc_data.animateY(3000)
@@ -201,7 +201,7 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         }
     }
 
-    fun animateXY() {
+    fun animateXY() {  //水平、鉛直動畫
         when (currentChart) {
             "Bar Chart" -> bc_data.animateXY(2000, 3000)
             "Line Chart" -> lc_data.animateXY(2000, 3000)
@@ -209,7 +209,7 @@ class MainActivity : AppCompatActivity(), ViewConstract {
         }
     }
 
-    fun pickerView() {
+    fun pickerView() {  // 改變圖表的 pickerView
         val pvOptions =
             OptionsPickerBuilder(this@MainActivity,
                 OnOptionsSelectListener { chooseChart, option2, options3, v -> //返回的分别是三个级别的选中位置
