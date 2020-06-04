@@ -12,4 +12,4 @@ jobs:
       - run:
           name: "Chart"
           command: 
-             chmod +x gradlew ./gradlew build
+             chmod +x gradlew
