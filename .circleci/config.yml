@@ -10,4 +10,5 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Chart"
           command: ./gradlew build
