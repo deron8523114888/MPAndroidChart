@@ -16,6 +16,16 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            keyAlias System.getenv("KEY_ALIAS")
+            keyPassword System.getenv("KEY_PASSWORD")
+            storePassword System.getenv("STORE_PASSWORD")
+            storeFile file('C:/Users/RSGAMES-2/Desktop/APK/chart.jks')
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
