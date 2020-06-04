@@ -11,4 +11,6 @@ jobs:
       - checkout
       - run:
           name: "Chart"
-          command: ./gradlew build
+          command: 
+             chmod +x gradlew
+             ./gradlew build
